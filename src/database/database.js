@@ -1,9 +1,9 @@
-import sequelize from 'sequelize';
+import { Sequelize } from 'sequelize';
 
-export default function database() {
-    return new sequelize('products', 'root', 'Jeanp', {
-        host: 'localhost',
-        dialect: 'mysql',
-        port: 3308
-    })
-}
+export const database = new Sequelize('products', 'root', 'Jeanp', {
+    host: 'localhost',
+    dialect: 'mysql',
+    port: 3308
+});
+
+export default database;
